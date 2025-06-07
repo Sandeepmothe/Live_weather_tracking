@@ -115,7 +115,7 @@ async function fetchData(){
 
     let lat = formattedData.coord.lat
     let lon =formattedData.coord.lon
-    let airPollutionData = await fetch(`http://api.openweathermap.org/data/2.5/air_pollution?lat=${lat}&lon=${lon}&appid=1262bc878bbdb5b164ca1e50b2e4e47c&units=metric`)
+    let airPollutionData = await fetch(`https://api.openweathermap.org/data/2.5/air_pollution?lat=${lat}&lon=${lon}&appid=1262bc878bbdb5b164ca1e50b2e4e47c&units=metric`)
     let airPollutionJsonData= await airPollutionData.json()
     // console.log(airPollutionJsonData)
     let pm25 = airPollutionJsonData.list[0].components.pm2_5
