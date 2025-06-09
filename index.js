@@ -73,7 +73,7 @@ async function fetchTodayForecast(lat, lon) {
       // Set text in elements like #row3temp1, #row3time1, ...
       const iconCode = item.weather[0].icon;
     //   console.log(iconCode)
-      const iconUrl = `./${iconCode}.png`;
+      const iconUrl = `assets/${iconCode}.png`;
 
       $(`#row3temp${index + 1}`).text(`${temp}`);
       $(`#row3time${index + 1}`).text(time);
@@ -100,7 +100,7 @@ async function fetchData(){
     let responseCityName = formattedData.name
     let responseCityTemp = formattedData.main.temp.toFixed(1)
     let weatherIcon = formattedData.weather[0].icon
-    let weatherIconUrl = `./${weatherIcon}.png`
+    let weatherIconUrl = `assets/${weatherIcon}.png`
     let responseCityDescription = capitalizeFirstLetter(formattedData.weather[0].description)
     let responseDateTime = convertTimestampToDate(formattedData.dt).split(",")
     let responseDate = responseDateTime[0]
